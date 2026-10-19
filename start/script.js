@@ -168,7 +168,7 @@ console.log()
    Usa filter per ottenere solo gli utenti con attivo: true.
    Stampa l'array risultante.
 */
-const activeUsers = utenti.filter((utenti.attivo) => utenti.attivo = 'true');
+const activeUsers = utenti.filter((attivo) => attivo = 'true');
 console.log(activeUsers);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -176,14 +176,19 @@ console.log(activeUsers);
    Usa filter per ottenere solo gli utenti maggiorenni (eta >= 18) che vivono a Milano.
    Stampa l'array risultante.
 */
-
+const adult = utenti.filter(({eta})=> eta >= 18);
+const milanesi =adult.filter(({città}) => città === 'Milano');
+console.log(milanesi);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 12 — find
    Usa find per trovare il primo utente con id === 4.
    Stampa l'oggetto.
 */
-
+const usersId4 = utenti.find(({id}) => id === 4 );
+console.log(usersId4);
+//OR
+console.log(utenti.find(({id}) => id === 4 ));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 13 — reduce
